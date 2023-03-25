@@ -18,8 +18,8 @@ const requestFormSchema = mongoose.Schema({
   },
   Registered_id: {
     type: String,
-    required: true,
     trim: true,
+    required: true,
   },
   phone: {
     type: String,
