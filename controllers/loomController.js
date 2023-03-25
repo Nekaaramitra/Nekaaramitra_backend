@@ -194,7 +194,10 @@ const deleteLoom = asyncHandler(async (req, res) => {
 // get loggedIn user Looms
 const getLooms = asyncHandler(async (req, res) => {
   try {
-    const looms = await Loom.find({ user: req.user._id });
+    const looms = await Loom.find({ user: req.user._id }).sort({
+      createdAt: -1,
+      updatedAt: -1,
+    });
     res.status(200).json(looms);
   } catch (error) {
     res.status(404).json({ message: error.message });
@@ -219,7 +222,7 @@ const searchLoom = asyncHandler(async (req, res) => {
 // get all looms for admin
 const getAllLooms = asyncHandler(async (req, res) => {
   try {
-    const looms = await Loom.find();
+    const looms = await Loom.find().sort({ createdAt: -1 });
     res.status(200).json(looms);
   } catch (error) {
     res.status(404).json({ message: error.message });
