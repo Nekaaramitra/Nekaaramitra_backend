@@ -13,7 +13,6 @@ const suggestion = mongoose.Schema({
   },
   user_email: {
     type: String,
-    // unique: true,
     required: true,
     trim: true,
   },
