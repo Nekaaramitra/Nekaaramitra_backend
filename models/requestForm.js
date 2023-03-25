@@ -13,6 +13,7 @@ const requestFormSchema = mongoose.Schema({
   },
   Registered_id: {
     type: String,
+    unique: false,
     trim: true,
     required: true,
   },
