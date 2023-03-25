@@ -11,15 +11,15 @@ const requestFormSchema = mongoose.Schema({
     required: true,
     trim: true,
   },
-  user_email: {
-    type: String,
-    required: true,
-    trim: true,
-  },
   Registered_id: {
     type: String,
     trim: true,
     required: true,
+  },
+  user_email: {
+    type: String,
+    required: true,
+    trim: true,
   },
   phone: {
     type: String,
