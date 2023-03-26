@@ -29,11 +29,7 @@ app.use(bodyParser.json());
 
 app.use(
   cors({
-    origin: [
-      process.env.FRONTEND_URL,
-      "http://localhost:3000",
-      "https://admin.nekaaramitra.com",
-    ],
+    origin: [process.env.FRONTEND_URL, "https://admin.nekaaramitra.com"],
     credentials: true,
   })
 );
