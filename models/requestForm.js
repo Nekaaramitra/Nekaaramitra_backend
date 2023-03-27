@@ -32,6 +32,11 @@ const requestFormSchema = mongoose.Schema({
     required: true,
     trim: true,
   },
+  message: {
+    type: String,
+    required: true,
+    trim: true,
+  },
 });
 const OrderRequest = mongoose.model("OrderRequest", requestFormSchema);
 module.exports = OrderRequest;
