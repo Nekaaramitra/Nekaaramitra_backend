@@ -27,6 +27,9 @@ app.use(cookieParser());
 app.use(bodyParser.json());
 // app.use(cors({}));
 
+const compression = require("compression");
+app.use(compression());
+
 app.use(
   cors({
     origin: [
